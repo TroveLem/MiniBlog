@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<title> Default </title>
+	</head>
+	<body>
+		<div>
+			{% for message in get_flashed_messages() %}
+				{{ message }}
+			{% endfor %}
+
+			{% if error %}
+				<p><strong>Error: </strong> {{ error }}</p>
+			{% endif %}
+		</div>
+		{% block content %}{% endblock %}
+	</body>
+</html>
